@@ -1,32 +1,3 @@
-select *from goma1;
-drop table goma1;
-use dori;
-
-SHOW DATABASES;
-
--- Conectar como root ou outro usuário com privilégios
-
-
--- Criar usuário
-CREATE USER 'lucas'@'localhost' IDENTIFIED BY 'Lukaoo618@';
-
--- Dar permissões no banco dori
-GRANT ALL PRIVILEGES ON dori.* TO 'lucas'@'localhost';
-
--- Atualizar privilégios
-FLUSH PRIVILEGES;
-
-
-select *from funcionarios;
-
-
-
-
-
-delete from goma1
-where id_funcionario in( 12156, 13201, 11876, 14023, 12734,
-    13678, 12199, 13450, 12987, 13812
-);
 
 INSERT INTO funcionarios (id_funcionario, nome_funcionario, data_inicio, setor_funcionario, faltas) VALUES
 (12156, 'José Marcos','2021-03-15', 'goma1', 2),
