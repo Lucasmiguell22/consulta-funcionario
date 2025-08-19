@@ -1,0 +1,62 @@
+select *from goma1;
+drop table goma1;
+use dori;
+
+SHOW DATABASES;
+
+-- Conectar como root ou outro usuário com privilégios
+
+
+-- Criar usuário
+CREATE USER 'lucas'@'localhost' IDENTIFIED BY 'Lukaoo618@';
+
+-- Dar permissões no banco dori
+GRANT ALL PRIVILEGES ON dori.* TO 'lucas'@'localhost';
+
+-- Atualizar privilégios
+FLUSH PRIVILEGES;
+
+
+select *from funcionarios;
+
+
+
+
+
+delete from goma1
+where id_funcionario in( 12156, 13201, 11876, 14023, 12734,
+    13678, 12199, 13450, 12987, 13812
+);
+
+INSERT INTO funcionarios (id_funcionario, nome_funcionario, data_inicio, setor_funcionario, faltas) VALUES
+(12156, 'José Marcos','2021-03-15', 'goma1', 2),
+(13201, 'Maria Clara','2022-07-08', 'goma4', 0),
+(11876, 'Carlos Eduardo','2020-11-23', 'goma2', 4),
+(14023, 'Ana Beatriz','2023-02-10', 'goma3', 1),
+(12567, 'Felipe Andrade','2021-09-27', 'goma2', 3),
+(13789, 'Patrícia Mendes','2020-05-19', 'goma4', 0),
+(14235, 'Bruno Ferreira','2022-04-30', 'goma1', 5),
+(12845, 'Larissa Lima','2023-06-12', 'goma3', 2),
+(13321, 'Thiago Moreira','2020-08-03', 'goma2', 1),
+(12678, 'Renata Campos','2021-12-14', 'goma4', 4),
+(13902, 'Diego Martins','2022-09-25', 'goma1', 0),
+(13056, 'Aline Barbosa','2020-10-07', 'goma3', 3),
+(14112, 'Gustavo Rocha','2023-01-18', 'goma2', 5),
+(12789, 'Camila Nunes','2021-04-22', 'goma4', 2),
+(13567, 'Rodrigo Alves','2022-11-11', 'goma1', 1),
+(14321, 'Natália Pereira','2020-02-28', 'goma3', 0),
+(12934, 'Fábio Santana','2021-08-16', 'goma2', 4),
+(13278, 'Amanda Torres','2023-05-05', 'goma4', 3),
+(13890, 'Leonardo Pinto','2020-07-21', 'goma1', 2),
+(12645, 'Carolina Dias','2022-03-09', 'goma3', 0),
+(13456, 'Marcos Vinícius','2021-06-30', 'goma2', 1),
+(14067, 'Vanessa Ribeiro','2020-12-19', 'goma4', 5),
+(12899, 'Eduardo Gomes','2023-04-27', 'goma1', 3),
+(13745, 'Beatriz Cardoso','2021-10-13', 'goma3', 2),
+(13123, 'André Silva','2020-01-29', 'goma2', 0),
+(14201, 'Tatiane Oliveira','2022-08-06', 'goma4', 4),
+(12978, 'Marcelo Costa','2021-11-20', 'goma1', 1),
+(13654, 'Daniela Souza','2020-09-02', 'goma3', 3),
+(14156, 'Rafaela Monteiro','2023-07-14', 'goma2', 2),
+(12701, 'Igor Carvalho','2022-05-28', 'goma4', 0);
+
