@@ -6,8 +6,8 @@ app = Flask(__name__)
 db_config = {
     "host": "localhost",
     "user": "root",
-    "password": "Lukaoo618@",
-    "database": "dori"
+    "password": "minhasenha",
+    "database": "meubanco"
 }
 
 @app.route("/", methods=["GET", "POST"])
@@ -43,3 +43,4 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
